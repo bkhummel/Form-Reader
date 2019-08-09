@@ -3,25 +3,32 @@ Project to read handwritten text for a standardized form provided by Indiana Lim
 
 
 Here is the form we want to read
+<p float="left">
 <img src = "https://github.com/bkhummel/Form-Reader/blob/master/Scanned_Forms/Form_A.png" width = "500"/>
-
+</p>
 We use template matching to find the fields and their associated boxes.
 To do this, I cropped the titles of each field and used them as templates.
-<p>
-<img src = "https://github.com/bkhummel/Form-Reader/blob/master/Templates/Channel.jpg" width = "300"/>
-<img src = "https://github.com/bkhummel/Form-Reader/blob/master/Templates/Qdate.jpg" width = "300"/>
-<img src = "https://github.com/bkhummel/Form-Reader/blob/master/Templates/Cut.jpg" width = "300"/>
-<img src = "https://github.com/bkhummel/Form-Reader/blob/master/Templates/Lenth.jpg" width = "300"/>
+<p float="left">
+<img src = "https://github.com/bkhummel/Form-Reader/blob/master/Templates/Channel.jpg" width = "200"/>
+<img src = "https://github.com/bkhummel/Form-Reader/blob/master/Templates/Qdate.jpg" width = "200"/>
+<img src = "https://github.com/bkhummel/Form-Reader/blob/master/Templates/Cut.jpg" width = "200"/>
+<img src = "https://github.com/bkhummel/Form-Reader/blob/master/Templates/Lenth.jpg" width = "200"/>
 </p>
 
 Run template matching to get the text boxes to the right.
 Example of template matching for 'Channel'
+<p float="left">
 <img src = "https://github.com/bkhummel/Form-Reader/blob/master/template_matches/0.jpg" width = "500"/>
+</p>
 
 Save these boxes to 'Boxes/' folder
+<p float="left">
 <img src = "https://github.com/bkhummel/Form-Reader/blob/master/Example_pics/Screenshot%20(19).png"/>
+</p>
 
 Run cv2.findContours on each box to get individual letters.
+<p float="left">
 <img src = "https://github.com/bkhummel/Form-Reader/blob/master/Example_pics/Screenshot%20(20).png"/>
+</p>
 
 Finally, feed each letter to the model and save predictions in specified text file ("predictions.txt").
